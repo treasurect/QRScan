@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white_f8"
+  android:orientation="vertical"
+  tools:context=".ui.activity.QRCreateActivity">
+
+  <include layout="@layout/layout_toolbar_view" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:layout_margin="20dp"
+    android:background="@drawable/shape_solid_ff_r_6"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="90dp"
+      android:orientation="horizontal">
+
+      <LinearLayout
+        android:id="@+id/create_text"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selected_item_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:src="@mipmap/ic_text2" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:text="文本"
+          android:textColor="@color/blue_32cbd1"
+          android:textSize="12sp" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/create_image"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selected_item_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+          android:layout_width="35dp"
+          android:layout_height="40dp"
+          android:src="@mipmap/ic_image2" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:text="图片"
+          android:textColor="@color/blue_32cbd1"
+          android:textSize="12sp" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/create_web"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selected_item_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:src="@mipmap/ic_web2" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:text="网址"
+          android:textColor="@color/blue_32cbd1"
+          android:textSize="12sp" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="90dp"
+      android:orientation="horizontal">
+
+      <LinearLayout
+        android:id="@+id/create_video"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selected_item_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:src="@mipmap/ic_video2" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:text="视频"
+          android:textColor="@color/blue_32cbd1"
+          android:textSize="12sp" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/create_phone"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selected_item_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+          android:layout_width="35dp"
+          android:layout_height="40dp"
+          android:src="@mipmap/ic_phone" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:text="电话"
+          android:textColor="@color/blue_32cbd1"
+          android:textSize="12sp" />
+      </LinearLayout>
+
+      <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+    </LinearLayout>
+  </LinearLayout>
+
+  <EditText
+    android:id="@+id/edit_qr_create"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:background="@drawable/shape_stroke_32cbd1_r_3"
+    android:gravity="top"
+    android:hint="请拷贝网址"
+    android:padding="10dp"
+    android:textSize="12sp" />
+<TextView
+  android:id="@+id/btn_qr_create"
+  android:layout_width="200dp"
+  android:layout_height="40dp"
+  android:textSize="15sp"
+  android:gravity="center"
+  android:textColor="@color/white"
+  android:text="二维码生成"
+  android:layout_gravity="center_horizontal"
+  android:layout_marginTop="30dp"
+  android:background="@drawable/shape_solid_32cbd1_r_6"/>
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1" />
+
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_gravity="bottom"
+      android:background="@color/white">
+
+      <LinearLayout
+        android:id="@+id/qr_scan"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:src="@mipmap/ic_scan" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:text="扫描"
+          android:textColor="@color/blue_32cbd1"
+          android:textSize="10sp" />
+      </LinearLayout>
+
+      <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+      <LinearLayout
+        android:id="@+id/qr_scan_album"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:src="@mipmap/ic_image" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:text="扫描"
+          android:textColor="@color/blue_32cbd1"
+          android:textSize="10sp" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/qr_create"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_gravity="center"
+      android:layout_marginBottom="5dp"
+      android:gravity="center"
+      android:orientation="vertical">
+
+      <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/ic_qrcode" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="二维码生成"
+        android:textColor="@color/blue_32cbd1"
+        android:textSize="10sp" />
+    </LinearLayout>
+  </FrameLayout>
+</LinearLayout>
